@@ -4,8 +4,8 @@ Static landing page for [megarisk.com](https://megarisk.com).
 
 ## Contents
 
-- `index.html`: the full page. Styles, script, logo SVG and favicon are inline.
-- `fonts/`: self-hosted variable fonts, the same families the draft site uses. The page uses Instrument Sans. Rethink Sans, the draft site's headline font, is included for future headings. Both are licensed under the SIL Open Font License (license files included).
+- `index.html`: the full page, with the animated logo hero and "How we work", "The model" and contact sections. Styles, script, logo SVG and favicon are inline.
+- `fonts/`: self-hosted variable fonts, the same families the draft site uses. Rethink Sans for headings and Instrument Sans for body text. Both are licensed under the SIL Open Font License (license files included).
 
 ## Local preview
 
@@ -23,5 +23,5 @@ Upload `index.html` and the `fonts/` folder to any static host. There is no buil
 
 ## Notes
 
-- The logo animation runs once on load. Visitors with reduced motion enabled see the static logo.
-- The contact email appears in two places in `index.html`: the "Contact us" button and the footer.
+- The logo animation runs once on load, and sections fade in on scroll. Visitors with reduced motion enabled see everything without animation.
+- The contact email appears in two places in `index.html`: the "Get in touch" button and the footer.

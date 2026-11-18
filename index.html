@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mega</title>
-<meta name="description" content="Mega builds and backs specialist insurance companies.">
+<meta name="description" content="Mega incubates and launches specialty MGAs.">
 <meta name="theme-color" content="#121211">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cstyle%3Epath%7Bfill:%23000%7D@media (prefers-color-scheme:dark)%7Bpath%7Bfill:%23fff%7D%7D%3C/style%3E%3Cg transform='translate(15 29.159) scale(0.84735)'%3E%3Cpath d='M153.419 120H113.916V28.573H100.117V120H56.9576V57.1461H43.1587V120H0V57.1461H28.4788V28.573H85.4372V0H153.419V120Z'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preload" href="fonts/InstrumentSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
@@ -29,7 +29,9 @@
     --fg: #ffffff;
     --muted: rgba(255, 255, 255, 0.7);
     --faint: rgba(255, 255, 255, 0.45);
+    --line: rgba(255, 255, 255, 0.12);
     --pad: clamp(20px, 2.3vw, 30px);
+    --max: 1280px;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -39,35 +41,98 @@
     font-size: 16px;
     letter-spacing: -0.01em;
     -webkit-font-smoothing: antialiased;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    min-height: 100svh;
   }
   a { color: inherit; text-decoration: none; }
+  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
 
-  main {
-    flex: 1;
+  /* Hero */
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 96px var(--pad);
+    position: relative;
   }
   .logo { width: clamp(220px, 34vw, 440px); }
   .logo svg { display: block; width: 100%; height: auto; }
-  /* Matches the draft site's ds-text-b20 + w-secondary */
-  h1 {
+  .tagline {
     margin-top: clamp(28px, 3.5vw, 40px);
-    font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
-    font-weight: 400;
+    font-family: "Rethink Sans", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
+    font-size: clamp(24px, 2.6vw, 34px);
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+  }
+  /* ds-text-b20 + w-secondary */
+  .b20 {
     font-size: 20px;
     line-height: 1.28;
     letter-spacing: -0.01em;
     color: var(--muted);
+  }
+  .hero .b20 { margin-top: 16px; max-width: 34em; text-wrap: balance; }
+  .scroll {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(var(--faint), transparent);
+    transform: translateX(-50%);
+  }
+
+  /* Sections */
+  section.block { padding: clamp(80px, 10vw, 140px) 0; border-top: 1px solid var(--line); }
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+  h2 {
+    margin-top: 16px;
+    font-family: "Rethink Sans", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
+    font-size: clamp(36px, 4.6vw, 60px);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    max-width: 16ch;
     text-wrap: balance;
   }
+  .steps {
+    margin-top: clamp(48px, 6vw, 80px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(24px, 3vw, 48px);
+  }
+  .step { border-top: 1px solid var(--line); padding-top: 24px; }
+  .step .num { font-size: 14px; color: var(--faint); font-variant-numeric: tabular-nums; }
+  .step h3 {
+    margin-top: 40px;
+    font-family: "Rethink Sans", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+  }
+  .step .b20 { margin-top: 12px; }
+
+  .model {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(24px, 4vw, 64px);
+    align-items: end;
+  }
+  .model .b20 { max-width: 28em; }
+
+  .contact { text-align: center; }
+  .contact h2 { margin: 16px auto 0; }
   .pill {
     display: inline-flex;
     align-items: center;
@@ -84,29 +149,42 @@
   }
   .pill:hover { opacity: 0.85; }
 
-  footer {
+  footer { border-top: 1px solid var(--line); }
+  footer .wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 64px;
-    padding: 0 var(--pad);
     color: var(--faint);
     font-size: 13px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
   footer a:hover { color: var(--fg); }
 
-  /* Text reveal after the logo animation */
+  @media (max-width: 800px) {
+    .steps, .model { grid-template-columns: 1fr; }
+    .step h3 { margin-top: 20px; }
+  }
+
+  /* Hero text reveal after the logo animation */
   .rise { opacity: 0; transform: translateY(10px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
   .in .rise { opacity: 1; transform: none; }
   .in .rise.d2 { transition-delay: 0.15s; }
-  .in footer.rise { transition-delay: 0.3s; }
+  .in .rise.d3 { transition-delay: 0.3s; }
+
+  /* Section reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .reveal.seen { opacity: 1; transform: none; }
+  .steps .reveal:nth-child(2) { transition-delay: 0.1s; }
+  .steps .reveal:nth-child(3) { transition-delay: 0.2s; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .rise { opacity: 1; transform: none; transition: none; }
+  }
 </style>
 </head>
 <body>
 
-<main>
-  <h2 class="logo" aria-label="Mega">
+<header class="hero">
+  <h1 class="logo" aria-label="Mega">
     <svg viewBox="0 0 552 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
         <!-- Three steps of the M, each rises from the baseline -->
@@ -129,14 +207,61 @@
         </g>
       </g>
     </svg>
-  </h2>
-  <h1 class="rise">Specialist insurance, built to last.</h1>
-  <a class="pill rise d2" href="mailto:hello@megarisk.com">Contact us</a>
+  </h1>
+  <p class="tagline rise">We incubate and launch specialty MGAs.</p>
+  <p class="b20 rise d2">Mega is a program administrator. We find underserved specialty lines and build the MGAs to write them.</p>
+  <span class="scroll rise d3" aria-hidden="true"></span>
+</header>
+
+<main>
+  <section class="block" id="how-we-work">
+    <div class="wrap">
+      <p class="eyebrow reveal">How we work</p>
+      <h2 class="reveal">From opportunity to first policy.</h2>
+      <div class="steps">
+        <div class="step reveal">
+          <span class="num">01</span>
+          <h3>Identify</h3>
+          <p class="b20">We track specialty lines and classes of business where an MGA can win.</p>
+        </div>
+        <div class="step reveal">
+          <span class="num">02</span>
+          <h3>Validate</h3>
+          <p class="b20">We test each opportunity on underwriting performance, market size, technology advantage and carrier interest.</p>
+        </div>
+        <div class="step reveal">
+          <span class="num">03</span>
+          <h3>Build and launch</h3>
+          <p class="b20">We recruit the underwriting lead, secure capacity and licensing, then bind the first policy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="model">
+    <div class="wrap model">
+      <div>
+        <p class="eyebrow reveal">The model</p>
+        <h2 class="reveal">Independent MGAs. One platform behind them.</h2>
+      </div>
+      <p class="b20 reveal">Each MGA runs under its own brand with its own underwriting team. Mega provides the technology and capital behind each one.</p>
+    </div>
+  </section>
+
+  <section class="block contact" id="contact">
+    <div class="wrap">
+      <p class="eyebrow reveal">Contact</p>
+      <h2 class="reveal">Building something in specialty insurance?</h2>
+      <a class="pill reveal" href="mailto:hello@megarisk.com">Get in touch</a>
+    </div>
+  </section>
 </main>
 
-<footer class="rise">
-  <span>&copy; <span id="yr">2026</span> Mega Risk, LLC</span>
-  <a href="mailto:hello@megarisk.com">hello@megarisk.com</a>
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="yr">2026</span> Mega Risk, LLC</span>
+    <a href="mailto:hello@megarisk.com">hello@megarisk.com</a>
+  </div>
 </footer>
 
 <script>
@@ -178,6 +303,17 @@
     if (t < WIPE_START + WIPE_DUR) requestAnimationFrame(frame); else finish();
   }
   requestAnimationFrame(frame);
+
+  // Section reveal on scroll
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('seen'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add('seen'); });
+  }
 })();
 </script>
 </body>
