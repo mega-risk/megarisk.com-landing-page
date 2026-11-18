@@ -7,10 +7,23 @@
 <meta name="description" content="Mega builds and backs specialist insurance companies.">
 <meta name="theme-color" content="#121211">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cstyle%3Epath%7Bfill:%23000%7D@media (prefers-color-scheme:dark)%7Bpath%7Bfill:%23fff%7D%7D%3C/style%3E%3Cg transform='translate(15 29.159) scale(0.84735)'%3E%3Cpath d='M153.419 120H113.916V28.573H100.117V120H56.9576V57.1461H43.1587V120H0V57.1461H28.4788V28.573H85.4372V0H153.419V120Z'/%3E%3C/g%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500&family=Rethink+Sans:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" href="fonts/InstrumentSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+  @font-face {
+    font-family: "Rethink Sans";
+    src: url("fonts/RethinkSans-Variable.woff2") format("woff2");
+    font-weight: 400 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Instrument Sans";
+    src: url("fonts/InstrumentSans-Variable.woff2") format("woff2");
+    font-weight: 400 700;
+    font-stretch: 75% 100%;
+    font-style: normal;
+    font-display: swap;
+  }
   :root {
     --bg: #121211;
     --fg: #ffffff;
@@ -44,13 +57,14 @@
   }
   .logo { width: clamp(220px, 34vw, 440px); }
   .logo svg { display: block; width: 100%; height: auto; }
+  /* Matches the draft site's ds-text-b20 + w-secondary */
   h1 {
-    margin-top: clamp(28px, 3.5vw, 44px);
-    font-family: "Rethink Sans", "Helvetica Neue", Arial, sans-serif;
-    font-weight: 500;
-    font-size: clamp(22px, 2.4vw, 32px);
-    line-height: 1.15;
-    letter-spacing: -0.03em;
+    margin-top: clamp(28px, 3.5vw, 40px);
+    font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.28;
+    letter-spacing: -0.01em;
     color: var(--muted);
     text-wrap: balance;
   }

@@ -4,7 +4,8 @@ Static landing page for [megarisk.com](https://megarisk.com).
 
 ## Contents
 
-- `index.html`: the full page. Styles, script, logo SVG and favicon are inline. Fonts load from Google Fonts (Rethink Sans, Instrument Sans).
+- `index.html`: the full page. Styles, script, logo SVG and favicon are inline.
+- `fonts/`: self-hosted variable fonts, the same families the draft site uses. The page uses Instrument Sans. Rethink Sans, the draft site's headline font, is included for future headings. Both are licensed under the SIL Open Font License (license files included).
 
 ## Local preview
 
@@ -18,7 +19,7 @@ Then visit http://localhost:8000.
 
 ## Deploy
 
-Upload `index.html` to any static host. There is no build step and there are no dependencies.
+Upload `index.html` and the `fonts/` folder to any static host. There is no build step and there are no dependencies.
 
 ## Notes
 
