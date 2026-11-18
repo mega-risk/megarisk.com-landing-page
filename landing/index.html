@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MEGA | Building the next generation of specialty MGAs</title>
+<meta name="description" content="MEGA partners with proven underwriters to build, launch, and back the next generation of specialty MGAs.">
+<link rel="canonical" href="https://megarisk.com/landing/">
+<meta name="robots" content="noindex, nofollow">
+
+<!-- Link previews (Open Graph and Twitter/X) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MEGA">
+<meta property="og:url" content="https://megarisk.com/landing/">
+<meta property="og:title" content="MEGA | Building the next generation of specialty MGAs">
+<meta property="og:description" content="MEGA partners with proven underwriters to build, launch, and back the next generation of specialty MGAs.">
+<meta property="og:image" content="https://megarisk.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MEGA logo with the tagline: We incubate and launch specialty MGAs.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="MEGA | Building the next generation of specialty MGAs">
+<meta name="twitter:description" content="MEGA partners with proven underwriters to build, launch, and back the next generation of specialty MGAs.">
+<meta name="twitter:image" content="https://megarisk.com/og-image.png">
+<meta name="twitter:image:alt" content="MEGA logo with the tagline: We incubate and launch specialty MGAs.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "MEGA",
+  "legalName": "MEGA Risk, LLC",
+  "url": "https://megarisk.com/",
+  "logo": "https://megarisk.com/apple-touch-icon.png",
+  "email": "hello@megarisk.com",
+  "description": "MEGA partners with proven underwriters to build, launch, and back the next generation of specialty MGAs."
+}
+</script>
+<meta name="theme-color" content="#121211">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cstyle%3Epath%7Bfill:%23000%7D@media (prefers-color-scheme:dark)%7Bpath%7Bfill:%23fff%7D%7D%3C/style%3E%3Cg transform='translate(15 29.159) scale(0.84735)'%3E%3Cpath d='M153.419 120H113.916V28.573H100.117V120H56.9576V57.1461H43.1587V120H0V57.1461H28.4788V28.573H85.4372V0H153.419V120Z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preload" href="../fonts/InstrumentSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face {
+    font-family: "Rethink Sans";
+    src: url("../fonts/RethinkSans-Variable.woff2") format("woff2");
+    font-weight: 400 800;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Instrument Sans";
+    src: url("../fonts/InstrumentSans-Variable.woff2") format("woff2");
+    font-weight: 400 700;
+    font-stretch: 75% 100%;
+    font-style: normal;
+    font-display: swap;
+  }
+  :root {
+    --bg: #121211;
+    --fg: #ffffff;
+    --muted: rgba(255, 255, 255, 0.7);
+    --faint: rgba(255, 255, 255, 0.45);
+    --line: rgba(255, 255, 255, 0.12);
+    --pad: clamp(20px, 2.3vw, 30px);
+    --max: 1280px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+
+  /* Hero */
+  .hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 96px var(--pad);
+    position: relative;
+  }
+  .logo { width: clamp(220px, 34vw, 440px); }
+  .logo svg { display: block; width: 100%; height: auto; }
+  .tagline {
+    margin-top: clamp(28px, 3.5vw, 40px);
+    max-width: 34em;
+    text-wrap: balance;
+  }
+  @media (max-width: 640px) { .br-wide { display: none; } }
+  /* ds-text-b20 + w-secondary */
+  .b20 {
+    font-size: 20px;
+    line-height: 1.28;
+    letter-spacing: -0.01em;
+    color: var(--muted);
+  }
+    .scroll {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(var(--faint), transparent);
+    transform: translateX(-50%);
+  }
+
+  /* Sections */
+  section.block { padding: clamp(80px, 10vw, 140px) 0; border-top: 1px solid var(--line); }
+  .eyebrow {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+  h2 {
+    margin-top: 16px;
+    font-family: "Rethink Sans", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
+    font-size: clamp(36px, 4.6vw, 60px);
+    line-height: 1;
+    letter-spacing: -0.05em;
+    max-width: 16ch;
+    text-wrap: balance;
+  }
+  /* Portfolio */
+  .portfolio {
+    margin-top: clamp(48px, 6vw, 80px);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .co {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 240px;
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+  a.co:hover { border-color: rgba(255, 255, 255, 0.35); background: rgba(255, 255, 255, 0.03); }
+  .co .mark { height: 40px; display: flex; align-items: center; }
+  .co .mark svg { display: block; height: 100%; width: auto; max-width: 100%; }
+  .co .mark.manta { height: 34px; }
+  .co .mark.glyph { height: 38px; }
+  .co .mark.bondwright { height: 21px; }
+  .co .meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 48px; }
+  .co .line { font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--faint); }
+  .co .status { font-size: 14px; color: var(--muted); white-space: nowrap; }
+  .co .status.live { color: var(--fg); }
+  .co.soon .mark { opacity: 0.55; }
+  .co.more { border-style: dashed; }
+  .co.more .plus {
+    width: 40px; height: 40px;
+    display: grid; place-items: center;
+    border: 1px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: var(--faint);
+    font-size: 22px;
+    line-height: 1;
+  }
+  .co.more h3 {
+    font-family: "Rethink Sans", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-top: 48px;
+  }
+  .co.more .b20 { font-size: 16px; margin-top: 8px; }
+
+  /* Founder */
+  .founder {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: clamp(32px, 6vw, 96px);
+    align-items: center;
+  }
+  .headshot {
+    aspect-ratio: 4 / 5;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #1d1d1b;
+    border: 1px solid var(--line);
+    display: grid;
+    place-items: center;
+  }
+  .headshot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .headshot .ph {
+    font-family: "Rethink Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: clamp(72px, 10vw, 128px);
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    color: rgba(255, 255, 255, 0.18);
+  }
+  .founder h2 { max-width: none; }
+  .founder .role { margin-top: 12px; font-size: 16px; color: var(--faint); }
+  .founder .bio { margin-top: 28px; max-width: 30em; text-wrap: pretty; }
+  .founder .bio + .bio { margin-top: 16px; }
+  .backed {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 16px;
+    color: var(--muted);
+  }
+  .backed strong { color: var(--fg); font-weight: 500; }
+  .backed a { text-decoration: underline; text-decoration-color: rgba(255, 255, 255, 0.3); text-underline-offset: 3px; transition: text-decoration-color 0.2s ease; }
+  .backed a:hover { text-decoration-color: var(--fg); }
+
+  .contact { text-align: center; }
+  .contact h2 { margin: 16px auto 0; }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    height: 44px;
+    margin-top: 36px;
+    padding: 0 22px;
+    border-radius: 100px;
+    background: var(--fg);
+    color: var(--bg);
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0;
+    transition: opacity 0.2s ease;
+  }
+  .pill:hover { opacity: 0.85; }
+
+  footer { border-top: 1px solid var(--line); }
+  footer .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    color: var(--faint);
+    font-size: 13px;
+  }
+  footer a:hover { color: var(--fg); }
+
+  @media (max-width: 1000px) {
+    .portfolio { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 800px) {
+    .founder { grid-template-columns: 1fr; }
+    .headshot { max-width: 360px; }
+  }
+  @media (max-width: 560px) {
+    .portfolio { grid-template-columns: 1fr; }
+    .co { min-height: 168px; padding: 24px; }
+    .co .meta, .co.more h3 { margin-top: 32px; }
+  }
+
+  /* Hero text reveal after the logo animation */
+  .rise { opacity: 0; transform: translateY(10px); transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .in .rise { opacity: 1; transform: none; }
+  .in .rise.d2 { transition-delay: 0.15s; }
+  .in .rise.d3 { transition-delay: 0.3s; }
+
+  /* Section reveal on scroll */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1); }
+  .reveal.seen { opacity: 1; transform: none; }
+  .portfolio .reveal:nth-child(2) { transition-delay: 0.08s; }
+  .portfolio .reveal:nth-child(3) { transition-delay: 0.16s; }
+  .portfolio .reveal:nth-child(4) { transition-delay: 0.24s; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .rise { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1 class="logo" aria-label="MEGA">
+    <svg viewBox="0 0 552 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <!-- M build: each vertical block rises from the baseline; the middle and
+             last blocks then extend their horizontal step left to meet the block before -->
+        <clipPath id="m-clip">
+          <rect id="m-up1"   x="-1"      width="44.4"   y="120" height="0"/>
+          <rect id="m-up2"   x="56.958"  width="43.4"   y="120" height="0"/>
+          <rect id="m-left2" x="57.46"   width="0"      y="20"  height="37.646"/>
+          <rect id="m-up3"   x="113.916" width="41"     y="120" height="0"/>
+          <rect id="m-left3" x="114.416" width="0"      y="-1"  height="30.073"/>
+        </clipPath>
+        <!-- Left-to-right wipe for EGA -->
+        <clipPath id="ega-clip">
+          <rect id="wipe" x="160" y="0" width="0" height="120"/>
+        </clipPath>
+      </defs>
+      <g fill="#FFFFFF">
+        <path id="m" clip-path="url(#m-clip)" d="M153.419 120H113.916V28.573H100.117V120H56.9576V57.1461H43.1587V120H0V57.1461H28.4788V28.573H85.4372V0H153.419V120Z"/>
+        <g clip-path="url(#ega-clip)">
+          <path d="M283.924 32.1808H210.377V45.8046H283.924V74.1954H210.377V87.8999H283.924V120H167.219V0H283.924V32.1808Z"/>
+          <path d="M417.826 0V28.3901H340.61V85.1632H381.273V71.3415H354.409V42.3661H417.826V120H297.451V0H417.826Z"/>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M552 120H508.841V69.8052H474.784V120H431.625V0H552V120ZM474.784 41.4143H508.841V28.3901H474.784V41.4143Z"/>
+        </g>
+      </g>
+    </svg>
+  </h1>
+  <p class="tagline b20 rise">MEGA partners with proven underwriters to build, launch,<br class="br-wide"> and back the next generation of specialty MGAs.</p>
+  <span class="scroll rise d2" aria-hidden="true"></span>
+</header>
+
+<main>
+  <section class="block" id="portfolio">
+    <div class="wrap">
+      <p class="eyebrow reveal">Our portfolio</p>
+      <h2 class="reveal">Specialty MGAs, built with proven underwriters.</h2>
+      <div class="portfolio">
+        <a class="co reveal" href="https://mantamarine.ai/" target="_blank" rel="noopener">
+          <div class="mark manta"><svg role="img" aria-label="Manta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 290 68" fill="none"><rect width="68.04" height="68" rx="34" fill="#FFFFFF"></rect><g fill="#000000"><path d="M33.55 12.2C33.84 11.91 34.31 11.91 34.59 12.2L42.3 19.88H42.31L34.81 55.6C34.64 56.38 33.52 56.38 33.36 55.6L26.04 19.68L33.55 12.2Z"></path><path d="M23.09 22.63L28.55 47.37C22.07 41.31 12.87 38.55 9.54 37.7C8.99 37.56 8.8 36.88 9.2 36.47L23.09 22.63V22.63Z"></path><path d="M58.94 36.47C59.35 36.88 59.16 37.56 58.61 37.7C55.27 38.55 46.08 41.31 39.6 47.37L45.05 22.63V22.63L58.94 36.47Z"></path></g><g fill="#FFFFFF"><path fill-rule="evenodd" clip-rule="evenodd" d="M180.29 51.42H171.82L169.48 45.98V45.98H151.56L149.22 51.42H140.8L153.88 22.72C155.7 18.73 159.73 16.16 164.17 16.16L180.29 51.42ZM154.47 39.23H166.62L160.6 25.17H160.5L154.47 39.23Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M290 51.42H281.53L279.18 45.98V45.98H261.27L258.93 51.42H250.5L263.59 22.72C265.41 18.73 269.44 16.16 273.88 16.16L290 51.42ZM264.18 39.23H276.32L270.3 25.17H270.2L264.18 39.23Z"></path><path d="M137.18 51.42H129.42V28.29H129.32L116.97 51.42H113.81L101.46 28.29H101.36V51.42H93.55V16.15C99.09 16.15 104.16 19.21 106.69 24.09L115.28 40.74H115.39L124.09 24.03C126.61 19.19 131.66 16.15 137.18 16.15V51.42Z"></path><path d="M216.98 51.42H208.51L191.72 26.93H191.62V51.42H183.81V16.15C189.15 16.15 194.12 18.76 197.11 23.12L209.07 40.58H209.17V16.15H216.98V51.42Z"></path><path d="M255.25 22.95H242.55V51.42H234.74V22.95H222.03V16.15H255.25V22.95Z"></path></g></svg></div>
+          <div class="meta"><span class="line">Marine insurance</span><span class="status live">Visit site &#8599;</span></div>
+        </a>
+        <div class="co soon reveal">
+          <div class="mark glyph"><svg role="img" aria-label="Glyph" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240.38 80" fill="none"><g fill="white"><path fill-rule="evenodd" clip-rule="evenodd" d="M51.2 0C61.28 0 66.32 4.41e-05 70.17 1.96C73.56 3.69 76.31 6.44 78.04 9.83C80 13.68 80 18.72 80 28.8V51.2C80 61.28 80 66.32 78.04 70.17C76.31 73.56 73.56 76.31 70.17 78.04C66.32 80 61.28 80 51.2 80H28.8C18.72 80 13.68 80 9.83 78.04C6.44 76.31 3.69 73.56 1.96 70.17C4.41e-05 66.32 0 61.28 0 51.2V28.8C0 18.72 4.41e-05 13.68 1.96 9.83C3.69 6.44 6.44 3.69 9.83 1.96C13.68 4.41e-05 18.72 0 28.8 0H51.2ZM31.23 15.58L12 34.81V45.19L31.23 64.42H34.99V55.32L19.67 40L34.99 24.68V15.58H31.23ZM45.01 15.58V24.68L60.33 40L45.01 55.32V64.42H48.77L68 45.19V34.81L48.77 15.58H45.01ZM34.99 34.3V45.7H45.01V34.3H34.99Z"></path><path d="M112.67 61.71C108.14 61.71 104.27 60.81 101.06 59.01C97.86 57.2 95.41 54.7 93.73 51.49C92.04 48.24 91.2 44.51 91.2 40.3C91.2 35.93 92.04 32.08 93.73 28.76C95.41 25.43 97.82 22.84 100.94 21C104.07 19.11 107.78 18.17 112.07 18.17C117 18.17 121.07 19.35 124.28 21.72C127.53 24.05 129.61 27.29 130.53 31.46H122.41C121.81 29.38 120.63 27.75 118.86 26.59C117.1 25.39 114.84 24.79 112.07 24.79C109.26 24.79 106.84 25.43 104.79 26.71C102.75 27.95 101.18 29.74 100.1 32.06C99.06 34.35 98.54 37.12 98.54 40.36C98.54 43.45 99.08 46.12 100.16 48.36C101.28 50.61 102.91 52.33 105.03 53.54C107.16 54.7 109.7 55.28 112.67 55.28C116.32 55.28 119.19 54.26 121.27 52.21C123.4 50.13 124.48 47.22 124.52 43.49H112.49V37.96H131.8V41.03C131.8 45.52 130.97 49.31 129.33 52.39C127.69 55.48 125.42 57.81 122.53 59.37C119.69 60.93 116.4 61.71 112.67 61.71Z"></path><path d="M134.41 60.99V17.69H141.62V60.99H134.41Z"></path><path d="M143.98 74.22V68.45H150.29C150.9 68.45 151.38 68.37 151.74 68.21C152.14 68.05 152.52 67.73 152.88 67.25C153.28 66.77 153.7 65.98 154.14 64.9L156.91 58.83L156.49 62.14L143.44 31.16H151.32L159.92 52.51L168.94 31.16H176.64L160.64 67.25C159.96 68.77 159.38 69.99 158.9 70.92C158.41 71.84 157.93 72.54 157.45 73.02C156.97 73.5 156.39 73.82 155.71 73.98C155.07 74.14 154.26 74.22 153.3 74.22H143.98Z"></path><path d="M177.25 74.22V31.16H184.47V35.55C185.43 34.19 186.74 33.01 188.38 32C190.02 30.96 192.11 30.44 194.63 30.44C197.48 30.44 200.01 31.12 202.21 32.49C204.42 33.85 206.14 35.71 207.38 38.08C208.67 40.44 209.31 43.13 209.31 46.14C209.31 49.1 208.67 51.77 207.38 54.14C206.14 56.5 204.42 58.37 202.21 59.73C200.01 61.05 197.48 61.71 194.63 61.71C192.35 61.71 190.34 61.27 188.62 60.39C186.9 59.51 185.51 58.29 184.47 56.72V74.22H177.25ZM193.19 55.4C194.91 55.4 196.44 55 197.76 54.2C199.09 53.39 200.11 52.31 200.83 50.95C201.59 49.55 201.97 47.94 201.97 46.14C201.97 44.29 201.59 42.67 200.83 41.27C200.11 39.82 199.09 38.72 197.76 37.96C196.44 37.16 194.91 36.76 193.19 36.76C191.47 36.76 189.94 37.16 188.62 37.96C187.3 38.72 186.25 39.8 185.49 41.21C184.73 42.61 184.35 44.23 184.35 46.08C184.35 47.92 184.73 49.55 185.49 50.95C186.25 52.31 187.3 53.39 188.62 54.2C189.94 55 191.47 55.4 193.19 55.4Z"></path><path d="M211.57 60.99V17.69H218.78V35.79C219.79 34.15 221.15 32.85 222.87 31.88C224.64 30.92 226.62 30.44 228.83 30.44C232.44 30.44 235.26 31.6 237.31 33.93C239.35 36.21 240.38 39.58 240.38 44.03V60.99H233.22V44.75C233.22 42.07 232.68 40.04 231.59 38.68C230.55 37.28 228.89 36.58 226.6 36.58C224.36 36.58 222.49 37.36 221.01 38.92C219.53 40.48 218.78 42.71 218.78 45.6V60.99H211.57Z"></path></g></svg></div>
+          <div class="meta"><span class="line">Cyber insurance</span><span class="status">Coming soon</span></div>
+        </div>
+        <div class="co soon reveal">
+          <div class="mark bondwright"><svg role="img" aria-label="Bondwright" xmlns="http://www.w3.org/2000/svg" viewBox="0 0.35 383 40.04" fill="none"><g fill="#FFFFFF"><path fill-rule="evenodd" clip-rule="evenodd" d="M38.99 0.35C45.39 0.35 50.58 5.54 50.58 11.94C50.58 15.38 49.08 18.47 46.7 20.59C49.08 22.66 50.58 25.7 50.58 29.1C50.58 35.34 45.52 40.39 39.29 40.39H0.75V34.67H6.43C2.5 31.39 4.57e-05 26.48 0 20.97C0 14.75 3.2 9.28 8.04 6.07H0.75V0.35H38.99ZM35.94 23.53C35.3 27.99 33.01 31.91 29.7 34.67H39.29C42.36 34.67 44.86 32.18 44.86 29.1C44.86 26.03 42.36 23.53 39.29 23.53H35.94ZM5.99 23.53C7.18 29.02 12.11 33.16 18.06 33.17C24.01 33.17 28.94 29.02 30.13 23.53H5.99ZM18.06 8.78C12.33 8.78 7.55 12.62 6.14 17.81H29.99C28.58 12.62 23.79 8.78 18.06 8.78ZM28.09 6.07C32.09 8.72 34.97 12.92 35.85 17.81H38.99C42.23 17.81 44.86 15.18 44.86 11.94C44.86 8.7 42.23 6.07 38.99 6.07H28.09Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M120.55 3.86C122.91 3.86 125.09 4.27 127.09 5.1C129.09 5.89 130.83 7.02 132.31 8.5C133.78 9.97 134.93 11.71 135.75 13.71C136.58 15.68 136.99 17.85 136.99 20.2C136.99 22.59 136.58 24.78 135.75 26.79C134.93 28.76 133.78 30.48 132.31 31.96C130.83 33.43 129.09 34.58 127.09 35.4C125.09 36.2 122.91 36.59 120.55 36.59C118.16 36.59 115.95 36.2 113.92 35.4C111.92 34.58 110.16 33.43 108.66 31.96C107.19 30.48 106.04 28.75 105.21 26.74C104.39 24.74 103.98 22.56 103.98 20.2C103.98 17.85 104.39 15.68 105.21 13.71C106.04 11.71 107.19 9.97 108.66 8.5C110.16 7.02 111.92 5.89 113.92 5.1C115.95 4.27 118.16 3.86 120.55 3.86ZM120.5 7.88C119.5 7.88 118.56 8.08 117.68 8.5C116.79 8.88 116 9.44 115.29 10.18C114.58 10.88 113.96 11.75 113.43 12.78C112.93 13.78 112.53 14.92 112.24 16.18C111.97 17.42 111.84 18.76 111.84 20.2C111.84 22 112.05 23.67 112.46 25.2C112.9 26.7 113.51 28.01 114.27 29.13C115.07 30.22 116 31.07 117.06 31.69C118.12 32.28 119.28 32.57 120.55 32.57C121.55 32.57 122.48 32.38 123.33 32C124.19 31.59 124.97 31.03 125.67 30.32C126.38 29.58 126.99 28.7 127.49 27.67C128.02 26.64 128.42 25.51 128.68 24.27C128.95 23 129.08 21.65 129.08 20.2C129.08 18.41 128.86 16.76 128.42 15.26C128 13.75 127.41 12.46 126.65 11.37C125.91 10.25 125.01 9.4 123.95 8.81C122.92 8.19 121.77 7.88 120.5 7.88Z"></path><path d="M306.81 3.86C309.07 3.86 311.05 4.14 312.73 4.7C314.41 5.26 315.83 6.05 317.01 7.08C318.22 8.09 319.21 9.28 319.98 10.66L314.67 15.65L314.27 15.57C314.13 14.71 313.86 13.83 313.48 12.91C313.12 12 312.64 11.16 312.02 10.4C311.4 9.63 310.65 9.01 309.77 8.54C308.88 8.07 307.85 7.83 306.67 7.83C305.64 7.83 304.65 8.01 303.71 8.36C302.8 8.69 301.96 9.17 301.19 9.82C300.45 10.47 299.81 11.28 299.25 12.25C298.69 13.19 298.26 14.3 297.96 15.57C297.67 16.8 297.52 18.19 297.52 19.72C297.52 22.37 297.91 24.67 298.67 26.61C299.47 28.52 300.53 30 301.85 31.03C303.21 32.06 304.7 32.57 306.32 32.57C307.76 32.57 309.04 32.31 310.16 31.78C311.28 31.22 312.17 30.47 312.81 29.53V24.45L307.51 22.55V20.07H321.88V20.56L320.06 23.16V30.5C318.77 31.91 317.43 33.03 316.04 33.85C314.69 34.65 313.37 35.25 312.11 35.67C310.84 36.05 309.68 36.3 308.62 36.42C307.56 36.54 306.67 36.59 305.96 36.59C303.81 36.59 301.75 36.26 299.78 35.58C297.83 34.9 296.09 33.88 294.56 32.53C293.03 31.15 291.82 29.44 290.94 27.41C290.08 25.34 289.66 22.94 289.66 20.2C289.66 17.47 290.13 15.08 291.07 13.05C292.04 11.02 293.34 9.32 294.96 7.97C296.61 6.58 298.45 5.55 300.48 4.87C302.55 4.2 304.65 3.86 306.81 3.86Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M90.63 4.3C92.58 4.3 94.36 4.61 95.98 5.23C97.6 5.85 98.9 6.74 99.87 7.92C100.84 9.1 101.33 10.56 101.33 12.3C101.33 13.39 101.11 14.37 100.67 15.26C100.25 16.11 99.66 16.86 98.9 17.51C98.13 18.13 97.23 18.64 96.2 19.06C98.23 19.53 99.83 20.45 100.97 21.84C102.15 23.19 102.74 24.8 102.74 26.65C102.74 28.75 102.23 30.5 101.2 31.91C100.19 33.33 98.79 34.39 97 35.09C95.23 35.8 93.2 36.15 90.9 36.15H75.52V35.75L77.51 33.15V7.3L75.52 4.7V4.3H90.63ZM85.2 31.91H89.09C90.38 31.91 91.46 31.71 92.31 31.29C93.17 30.88 93.8 30.29 94.21 29.53C94.65 28.76 94.88 27.83 94.88 26.74C94.88 25.74 94.68 24.87 94.3 24.14C93.92 23.37 93.3 22.77 92.44 22.32C91.59 21.88 90.47 21.66 89.09 21.66H85.2V31.91ZM85.2 17.51H88.95C90.04 17.51 90.91 17.33 91.56 16.98C92.24 16.6 92.72 16.07 93.02 15.39C93.34 14.71 93.51 13.93 93.51 13.05C93.51 11.6 93.11 10.5 92.31 9.73C91.55 8.94 90.37 8.54 88.78 8.54H85.2V17.51Z"></path><path d="M160.46 24.45L160.24 7.08L157.76 4.7V4.3H166.91V4.7L165.14 7.04L164.92 36.15H159.18L144.95 14.06L145.17 33.37L147.64 35.71V36.15H138.49V35.71L140.26 33.37L140.39 8.23L138.85 4.7V4.3H147.6L160.46 24.45Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M182.69 4.3C185.04 4.3 187.22 4.7 189.23 5.49C191.23 6.26 192.97 7.36 194.44 8.81C195.92 10.22 197.07 11.9 197.89 13.84C198.72 15.79 199.13 17.91 199.13 20.2C199.13 22.5 198.72 24.62 197.89 26.57C197.07 28.51 195.92 30.2 194.44 31.65C192.97 33.06 191.23 34.16 189.23 34.96C187.22 35.75 185.04 36.15 182.69 36.15H168.85V35.71L170.84 33.15V7.3L168.85 4.7V4.3H182.69ZM178.53 31.91H182.02C183.44 31.91 184.71 31.63 185.82 31.07C186.97 30.51 187.95 29.72 188.74 28.69C189.57 27.66 190.19 26.42 190.6 24.98C191.04 23.53 191.26 21.94 191.26 20.2C191.26 18.47 191.04 16.89 190.6 15.48C190.19 14.03 189.57 12.8 188.74 11.77C187.95 10.74 186.97 9.94 185.82 9.38C184.71 8.82 183.44 8.54 182.02 8.54H178.53V31.91Z"></path><path d="M209.56 4.7L208.24 7.17L211.91 19.72C212.32 21.1 212.67 22.37 212.97 23.52C213.26 24.67 213.48 25.58 213.63 26.26C213.81 26.93 213.89 27.27 213.9 27.27C213.9 27.26 213.97 26.93 214.12 26.26C214.26 25.58 214.47 24.67 214.74 23.52C215.03 22.34 215.35 21.06 215.71 19.67L218.98 7.3L217.12 4.7V4.3H227.6V4.7L226.27 7.17L230.03 19.76C230.44 21.15 230.79 22.41 231.09 23.56C231.38 24.68 231.6 25.58 231.75 26.26C231.93 26.93 232.01 27.26 232.01 27.27C232.02 27.27 232.09 26.93 232.24 26.26C232.41 25.58 232.65 24.67 232.94 23.52C233.24 22.37 233.58 21.1 233.96 19.72L237.54 7L236.04 4.7L236.08 4.3H244.74V4.7L242.8 7.04L233.25 36.15H227.42L223.35 23.21C222.94 21.82 222.57 20.57 222.25 19.45C221.92 18.3 221.67 17.39 221.5 16.71C221.35 16.04 221.28 15.7 221.28 15.7C221.28 15.7 221.19 16.04 221.01 16.71C220.83 17.39 220.58 18.3 220.26 19.45C219.97 20.57 219.6 21.82 219.15 23.21L215.18 36.15H209.43L200.02 7.3L197.5 4.7L197.45 4.3H209.52L209.56 4.7Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M260.45 4.3C262.9 4.3 264.98 4.65 266.69 5.36C268.42 6.07 269.75 7.1 270.66 8.45C271.58 9.81 272.03 11.46 272.03 13.4C272.03 14.7 271.77 15.88 271.24 16.94C270.71 18 269.94 18.91 268.94 19.67C267.94 20.41 266.73 21 265.31 21.44C266.35 21.74 267.23 22.13 267.97 22.63C268.73 23.1 269.38 23.75 269.91 24.58C270.47 25.4 270.96 26.45 271.37 27.71L273.09 33.1L275.7 35.71V36.15H265.54L263.68 29C263.24 27.32 262.69 26.02 262.05 25.11C261.4 24.17 260.62 23.52 259.7 23.16C258.82 22.81 257.76 22.63 256.52 22.63H254.88V33.24L256.87 35.71V36.15H245.21V35.71L247.19 33.15V7.3L245.21 4.7V4.3H260.45ZM254.88 18.39H258.73C259.82 18.39 260.76 18.2 261.56 17.82C262.38 17.41 263.02 16.83 263.46 16.1C263.93 15.36 264.17 14.46 264.17 13.4C264.17 11.81 263.67 10.6 262.66 9.78C261.66 8.95 260.35 8.54 258.73 8.54H254.88V18.39Z"></path><path d="M287.89 4.7L285.9 7.3V33.15L287.89 35.71V36.15H276.23V35.71L278.21 33.15V7.3L276.23 4.7V4.3H287.89V4.7Z"></path><path d="M334.46 4.7L332.47 7.3V17.38H344.49V7.3L342.5 4.7V4.3H354.17V4.7L352.18 7.3V33.15L354.17 35.71V36.15H342.5V35.71L344.49 33.15V21.62H332.47V33.15L334.46 35.71V36.15H322.79V35.71L324.78 33.15V7.3L322.79 4.7V4.3H334.46V4.7Z"></path><path d="M383 11.81H382.6L378.49 8.76L372.79 8.32V33.15L374.78 35.71V36.15H363.11V35.71L365.1 33.15V8.32L359.4 8.76L355.33 11.81H354.94L355.77 4.3H382.12L383 11.81Z"></path></g></svg></div>
+          <div class="meta"><span class="line">Surety bonds</span><span class="status">Coming soon</span></div>
+        </div>
+        <div class="co more reveal">
+          <span class="plus" aria-hidden="true">+</span>
+          <div>
+            <h3>More in the works.</h3>
+            <p class="b20">New MGAs are in development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="founder">
+    <div class="wrap founder">
+      <div class="headshot reveal">
+        <img src="../scott-harper.jpg" alt="Scott Harper" width="800" height="1000" loading="lazy">
+      </div>
+      <div>
+        <p class="eyebrow reveal">Founder</p>
+        <h2 class="reveal">Scott Harper</h2>
+        <p class="role reveal">Chief Executive Officer</p>
+        <p class="b20 bio reveal">Scott Harper is a tech entrepreneur and investor who has spent two decades building, scaling, and selling technology companies. He is Co-Founder and CEO of MEGA, where he is applying modern AI to specialty insurance.</p>
+        <p class="b20 bio reveal">Before MEGA, Scott co-founded and served as CEO of Dialexa, a product engineering firm he bootstrapped to more than 350 engineers, strategists, and designers before IBM acquired it in 2022. He led the Dialexa business and IBM&rsquo;s product engineering efforts through 2024. Scott was named EY Entrepreneur of the Year and holds a BS in Mechanical Engineering with a Biomedical Specialization from SMU. He lives in Dallas, TX with his wife and three children.</p>
+        <p class="backed reveal">Proudly backed by <a href="https://www.altaiventures.com/" target="_blank" rel="noopener"><strong>Altai Ventures</strong></a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block contact" id="contact">
+    <div class="wrap">
+      <p class="eyebrow reveal">Contact</p>
+      <h2 class="reveal">Building something in specialty insurance?</h2>
+      <a class="pill reveal" href="mailto:hello@megarisk.com?subject=MEGA%20Interest">Get in touch</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="yr">2026</span> MEGA Risk, LLC</span>
+    <a href="mailto:hello@megarisk.com?subject=MEGA%20Interest">hello@megarisk.com</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  var wipe = document.getElementById('wipe');
+  var WIPE_W = 392;
+
+  // Steps wipe left together once all three blocks are up (block 3 lands at 1120ms).
+  var STEPS_START = 1120, STEPS_DUR = 520;
+
+  // M build: blocks 1-3 rise in turn, then steps 2 and 3 wipe left together.
+  // "up" rects rise from the baseline to `to` (a y value); "left" rects grow
+  // leftward from their right edge `from` to `to` (an x value). Times in ms.
+  var parts = [
+    // Every part stops exactly at the logo's edge so no motion is cut off mid-move.
+    { id: 'm-up1',   dir: 'up',   to: 57.146,  start: 200,  dur: 440, ease: 'out' },
+    { id: 'm-up2',   dir: 'up',   to: 28.573,  start: 420,  dur: 460, ease: 'out' },
+    { id: 'm-up3',   dir: 'up',   to: 0,       start: 640,  dur: 480, ease: 'out' },
+    { id: 'm-left2', dir: 'left', from: 57.46,   to: 28.479, start: STEPS_START, dur: STEPS_DUR, ease: 'inOut' },
+    { id: 'm-left3', dir: 'left', from: 114.416, to: 85.437, start: STEPS_START, dur: STEPS_DUR, ease: 'inOut' }
+  ];
+  parts.forEach(function (p) { p.el = document.getElementById(p.id); });
+
+  function setPart(p, k) {
+    if (p.dir === 'up') {
+      var h = (120 - p.to) * k;
+      p.el.setAttribute('y', 120 - h); p.el.setAttribute('height', h);
+    } else {
+      var w = (p.from - p.to) * k;
+      p.el.setAttribute('x', p.from - w); p.el.setAttribute('width', w);
+    }
+  }
+  function finish() {
+    parts.forEach(function (p) { setPart(p, 1); });
+    document.getElementById('m').removeAttribute('clip-path'); // crisp final edges
+    wipe.setAttribute('width', WIPE_W);
+    document.body.classList.add('in');
+  }
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { finish(); return; }
+
+  var easeOut = function (t) { return 1 - Math.pow(1 - t, 3); };
+  var easeInOutSine = function (t) { return -(Math.cos(Math.PI * t) - 1) / 2; };
+  var easeInOut = function (t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; };
+
+  // EGA wipes in alongside the steps
+  var WIPE_START = STEPS_START, WIPE_DUR = 750;
+  var t0 = null, textShown = false;
+
+  function clamp01(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
+
+  function frame(now) {
+    if (t0 === null) t0 = now;
+    var t = now - t0;
+    parts.forEach(function (p) {
+      var k = clamp01((t - p.start) / p.dur);
+      setPart(p, p.ease === 'inOut' ? easeInOutSine(k) : easeOut(k));
+    });
+    var w = easeInOut(clamp01((t - WIPE_START) / WIPE_DUR));
+    wipe.setAttribute('width', WIPE_W * w);
+    if (!textShown && t > WIPE_START + WIPE_DUR * 0.6) { document.body.classList.add('in'); textShown = true; }
+    if (t < WIPE_START + WIPE_DUR) requestAnimationFrame(frame); else finish();
+  }
+  requestAnimationFrame(frame);
+
+  // Section reveal on scroll
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('seen'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  } else {
+    els.forEach(function (el) { el.classList.add('seen'); });
+  }
+})();
+</script>
+</body>
+</html>
