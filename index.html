@@ -3,10 +3,42 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mega</title>
-<meta name="description" content="Mega incubates and launches specialty MGAs.">
+<title>Mega | We incubate and launch specialty MGAs</title>
+<meta name="description" content="Mega is a program administrator. We find underserved specialty insurance lines and build the MGAs to write them, with the technology and capital behind each one.">
+<link rel="canonical" href="https://megarisk.com/">
+<meta name="robots" content="index, follow">
+
+<!-- Link previews (Open Graph and Twitter/X) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mega">
+<meta property="og:url" content="https://megarisk.com/">
+<meta property="og:title" content="Mega | We incubate and launch specialty MGAs">
+<meta property="og:description" content="We find underserved specialty insurance lines and build the MGAs to write them.">
+<meta property="og:image" content="https://megarisk.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mega logo with the tagline: We incubate and launch specialty MGAs.">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mega | We incubate and launch specialty MGAs">
+<meta name="twitter:description" content="We find underserved specialty insurance lines and build the MGAs to write them.">
+<meta name="twitter:image" content="https://megarisk.com/og-image.png">
+<meta name="twitter:image:alt" content="Mega logo with the tagline: We incubate and launch specialty MGAs.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Mega",
+  "legalName": "Mega Risk, LLC",
+  "url": "https://megarisk.com/",
+  "logo": "https://megarisk.com/apple-touch-icon.png",
+  "email": "hello@megarisk.com",
+  "description": "Mega is a program administrator that incubates and launches specialty MGAs."
+}
+</script>
 <meta name="theme-color" content="#121211">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 160'%3E%3Cstyle%3Epath%7Bfill:%23000%7D@media (prefers-color-scheme:dark)%7Bpath%7Bfill:%23fff%7D%7D%3C/style%3E%3Cg transform='translate(15 29.159) scale(0.84735)'%3E%3Cpath d='M153.419 120H113.916V28.573H100.117V120H56.9576V57.1461H43.1587V120H0V57.1461H28.4788V28.573H85.4372V0H153.419V120Z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preload" href="fonts/InstrumentSans-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   @font-face {
@@ -191,11 +223,14 @@
   <h1 class="logo" aria-label="Mega">
     <svg viewBox="0 0 552 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
-        <!-- Three steps of the M, each rises from the baseline -->
+        <!-- M build: each vertical block rises from the baseline; the middle and
+             last blocks then extend their horizontal step left to meet the block before -->
         <clipPath id="m-clip">
-          <rect class="step" x="0"      width="28.48"  y="120" height="0"/>
-          <rect class="step" x="27.98"  width="57.46"  y="120" height="0"/>
-          <rect class="step" x="84.94"  width="68.48"  y="120" height="0"/>
+          <rect id="m-up1"   x="-1"      width="44.4"   y="120" height="0"/>
+          <rect id="m-up2"   x="56.958"  width="43.4"   y="120" height="0"/>
+          <rect id="m-left2" x="57.46"   width="0"      y="20"  height="37.646"/>
+          <rect id="m-up3"   x="113.916" width="41"     y="120" height="0"/>
+          <rect id="m-left3" x="114.416" width="0"      y="-1"  height="30.073"/>
         </clipPath>
         <!-- Left-to-right wipe for EGA -->
         <clipPath id="ega-clip">
@@ -203,7 +238,7 @@
         </clipPath>
       </defs>
       <g fill="#FFFFFF">
-        <path clip-path="url(#m-clip)" d="M153.419 120H113.916V28.573H100.117V120H56.9576V57.1461H43.1587V120H0V57.1461H28.4788V28.573H85.4372V0H153.419V120Z"/>
+        <path id="m" clip-path="url(#m-clip)" d="M153.419 120H113.916V28.573H100.117V120H56.9576V57.1461H43.1587V120H0V57.1461H28.4788V28.573H85.4372V0H153.419V120Z"/>
         <g clip-path="url(#ega-clip)">
           <path d="M283.924 32.1808H210.377V45.8046H283.924V74.1954H210.377V87.8999H283.924V120H167.219V0H283.924V32.1808Z"/>
           <path d="M417.826 0V28.3901H340.61V85.1632H381.273V71.3415H354.409V42.3661H417.826V120H297.451V0H417.826Z"/>
@@ -294,13 +329,37 @@
 (function () {
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  var steps = document.querySelectorAll('#m-clip .step');
   var wipe = document.getElementById('wipe');
   var WIPE_W = 392;
 
-  function setStep(r, p) { var h = 120 * p; r.setAttribute('y', 120 - h); r.setAttribute('height', h); }
+  // Steps wipe left together once all three blocks are up (block 3 lands at 1120ms).
+  var STEPS_START = 1120, STEPS_DUR = 520;
+
+  // M build: blocks 1-3 rise in turn, then steps 2 and 3 wipe left together.
+  // "up" rects rise from the baseline to `to` (a y value); "left" rects grow
+  // leftward from their right edge `from` to `to` (an x value). Times in ms.
+  var parts = [
+    // Every part stops exactly at the logo's edge so no motion is cut off mid-move.
+    { id: 'm-up1',   dir: 'up',   to: 57.146,  start: 200,  dur: 440, ease: 'out' },
+    { id: 'm-up2',   dir: 'up',   to: 28.573,  start: 420,  dur: 460, ease: 'out' },
+    { id: 'm-up3',   dir: 'up',   to: 0,       start: 640,  dur: 480, ease: 'out' },
+    { id: 'm-left2', dir: 'left', from: 57.46,   to: 28.479, start: STEPS_START, dur: STEPS_DUR, ease: 'inOut' },
+    { id: 'm-left3', dir: 'left', from: 114.416, to: 85.437, start: STEPS_START, dur: STEPS_DUR, ease: 'inOut' }
+  ];
+  parts.forEach(function (p) { p.el = document.getElementById(p.id); });
+
+  function setPart(p, k) {
+    if (p.dir === 'up') {
+      var h = (120 - p.to) * k;
+      p.el.setAttribute('y', 120 - h); p.el.setAttribute('height', h);
+    } else {
+      var w = (p.from - p.to) * k;
+      p.el.setAttribute('x', p.from - w); p.el.setAttribute('width', w);
+    }
+  }
   function finish() {
-    steps.forEach(function (r) { setStep(r, 1); });
+    parts.forEach(function (p) { setPart(p, 1); });
+    document.getElementById('m').removeAttribute('clip-path'); // crisp final edges
     wipe.setAttribute('width', WIPE_W);
     document.body.classList.add('in');
   }
@@ -308,11 +367,11 @@
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { finish(); return; }
 
   var easeOut = function (t) { return 1 - Math.pow(1 - t, 3); };
+  var easeInOutSine = function (t) { return -(Math.cos(Math.PI * t) - 1) / 2; };
   var easeInOut = function (t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; };
 
-  // Timeline (ms)
-  var DELAY = 250, STEP_DUR = 420, STEP_GAP = 160;
-  var WIPE_START = DELAY + STEP_GAP * 2 + STEP_DUR + 80, WIPE_DUR = 750;
+  // EGA wipes in alongside the steps
+  var WIPE_START = STEPS_START, WIPE_DUR = 750;
   var t0 = null, textShown = false;
 
   function clamp01(x) { return x < 0 ? 0 : x > 1 ? 1 : x; }
@@ -320,8 +379,9 @@
   function frame(now) {
     if (t0 === null) t0 = now;
     var t = now - t0;
-    steps.forEach(function (r, i) {
-      setStep(r, easeOut(clamp01((t - DELAY - i * STEP_GAP) / STEP_DUR)));
+    parts.forEach(function (p) {
+      var k = clamp01((t - p.start) / p.dur);
+      setPart(p, p.ease === 'inOut' ? easeInOutSine(k) : easeOut(k));
     });
     var w = easeInOut(clamp01((t - WIPE_START) / WIPE_DUR));
     wipe.setAttribute('width', WIPE_W * w);
